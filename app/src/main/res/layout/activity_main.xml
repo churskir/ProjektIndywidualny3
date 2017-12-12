@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="churski.projektindywidualny3.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:gravity="end"
+        android:id="@+id/status"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/forwardButtons"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/status">
+
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LF"
+        android:textSize="150px"
+        android:onClick="onClick"
+        android:tag="LF"
+        android:id="@+id/buttonLF"
+        android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SF"
+            android:textSize="150px"
+            android:onClick="onClick"
+            android:tag="SF"
+            android:id="@+id/buttonSF"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RF"
+            android:textSize="150px"
+            android:onClick="onClick"
+            android:tag="RF"
+            android:id="@+id/buttonRF"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/backwardButtons"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/forwardButtons">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LB"
+            android:textSize="150px"
+            android:onClick="onClick"
+            android:tag="LB"
+            android:id="@+id/buttonLB"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SB"
+            android:textSize="150px"
+            android:onClick="onClick"
+            android:tag="SB"
+            android:id="@+id/buttonSB"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RB"
+            android:textSize="150px"
+            android:onClick="onClick"
+            android:tag="RB"
+            android:id="@+id/buttonRB"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
