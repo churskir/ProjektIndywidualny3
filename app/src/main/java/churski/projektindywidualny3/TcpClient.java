@@ -35,7 +35,7 @@ public class TcpClient {
 
         @Override
         protected Object doInBackground(Object[] objects) {
-            System.out.println("[ALL]: Init");
+            System.out.println("[APP]: Init");
             try {
                 socket = new Socket((InetAddress) objects[0], (int) objects[1]);
                 bufferOut = new PrintWriter(socket.getOutputStream());
@@ -55,21 +55,13 @@ public class TcpClient {
             try {
                 bufferOut.print((String) objects[0]);
                 bufferOut.flush();
-                System.out.println("[APP]: Postflush");
-                //String serverMessage = bufferIn.readLine();
-                //System.out.println("[APP]: " + serverMessage);
-                //return serverMessage;
+                System.out.println("[APP]: " + bufferIn.read());
                 return null;
             } catch (Exception e) {
-                System.out.println("[APP]: Exception while receiving response");
+                System.out.println("[APP]: Exception while sending message");
                 System.out.println("[APP]: " + e.toString());
                 return null;
             }
-        }
-
-        @Override
-        protected void onProgressUpdate(Object[] result) {
-            System.out.println("[APP]: " + result);
         }
     }
 }

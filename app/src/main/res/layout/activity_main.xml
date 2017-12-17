@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/forwardButtons"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/status">
+        app:layout_constraintBottom_toTopOf="@id/backwardButtons">
 
         <Button
         android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/backwardButtons"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/forwardButtons">
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <Button
             android:layout_width="wrap_content"
